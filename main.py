@@ -5,6 +5,7 @@ from random import randint
 game = Game()
 # set the players to place
 game.set_players("x", "o")
+# game logic to test the game
 p = 2
 while True:
     if p == 2:

@@ -7,6 +7,9 @@ class Board(object):
         self.board = [[0 for i in range(3)] for j in range(3)]
 
     def insert(self, tile):
+        'inserts a character to the board'
+        # input : (row, column)
+        # return : -1 if occupied
         t_row = int(tile[0])
         t_col = int(tile[1])
         bok = tile[2]
@@ -16,6 +19,12 @@ class Board(object):
             self.board[t_row][t_col] = bok
 
     def validate(self):
+        'checks the board for win or draw conditions'
+        # input : none
+        # output: char of the winner
+        # -1 if no condition
+        # 0 if draw
+        
         zero_count = 0
         # check for rows
         for i in range(3):
